@@ -38,9 +38,9 @@ class AppShell extends React.Component {
                         </IconButton>
                     </AppBar>
                     <Drawer open={this.state.toggle}>
-                        <MenuItem onClick={this.handleDrawerToggle}><Link component={RouterLink} to="/">Home</Link></MenuItem>
-                        <MenuItem onClick={this.handleDrawerToggle}><Link component={RouterLink} to="/texts">Texts</Link></MenuItem>
-                        <MenuItem onClick={this.handleDrawerToggle}><Link component={RouterLink} to="/words">Words</Link></MenuItem>
+                        <MenuItem onClick={this.handleDrawerToggle}><Link component={RouterLink} to="/">홈 화면</Link></MenuItem>
+                        <MenuItem onClick={this.handleDrawerToggle}><Link component={RouterLink} to="/texts">텍스트 관리</Link></MenuItem>
+                        <MenuItem onClick={this.handleDrawerToggle}><Link component={RouterLink} to="/words">단어 관리</Link></MenuItem>
                     </Drawer>
                 </div>
                 <div id="content" style={{margin: 'auto', marginTop: '20'}}>
