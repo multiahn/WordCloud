@@ -1,4 +1,5 @@
 'use strict'
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const port = process.env.PORT || 3000;
 const path = require('path');
@@ -36,6 +37,14 @@ module.exports = {
     plugins: [
       new HtmlWebpackPlugin({
           template: 'public/index.html'
+      }),
+      new CopyWebpackPlugin({
+        patterns:[
+          {
+            context: './public',
+            from: '*.*'
+          }
+        ]
       })
     ],
     devServer: {
