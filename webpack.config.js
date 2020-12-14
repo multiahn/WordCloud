@@ -20,8 +20,10 @@ module.exports = {
             exclude: /node_modules/,
             include: path.resolve(__dirname, './src'),
             loader: 'babel-loader',
-          },
-          { // 2
+          }, {
+            test: /\.css$/,
+            use: ['style-loader', 'css-loader']
+          }, { // 2
             test: /\.html$/,
             use: [
               {
