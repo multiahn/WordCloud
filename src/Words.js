@@ -47,6 +47,11 @@ class Words extends React.Component {
         return fetch(`${databaseURL}/words.json`, {
             method: 'POST',
             body: JSON.stringify(word)
+        }).then(res => {
+            if(res.status != 200) {
+                throw new Error(res.statusText)
+            }
+            return res.json();
         }).then(data => {
             let nextState = this.state.words;
             nextState[data.name] = word;
